@@ -7,7 +7,7 @@
         {
             userString = GetUserString();
 
-            char userOption = '0';
+            char userOption = '7';
 
             while (!userOption.Equals('0'))
             {
@@ -24,7 +24,29 @@
                        ReplaceWordOption(userString);
                         break;
                     case '2':
+                        ShowString(userString);
 
+                        bool isNotNull = false;
+
+                        while (!isNotNull)
+                        {
+                            Console.Clear();
+
+                            Console.WriteLine("\nHa elegido la opción Buscar texto: ");
+
+                            ShowString(userString);
+
+                            Console.Write("\n¿Qué texto desea buscar?: ");
+                            string textToSearch = Console.ReadLine();
+
+                            // TODO: Falta por comprobar que no sea nula y, luego, si el texto contiene o no la cadena. 
+                            if (!string.IsNullOrEmpty(textToSearch)) { 
+
+                            } else
+                            {
+
+                            }
+                        }
 
                         break;
                 }
@@ -40,6 +62,8 @@
             while (!isFound)
             {
                 Console.Clear();
+
+                Console.WriteLine("\nHa elegido la opción Sustituir palabra: ");
 
                 ShowString(userString);
 
@@ -65,6 +89,8 @@
 
                             Console.WriteLine("\nSe ha sustituido la palabra con éxito.\n");
                             ShowString(userString);
+
+                            isNotNull = true;
                         }
                         else
                         {
@@ -72,6 +98,8 @@
                             Console.ReadKey();
                         }
                     }
+
+                    isFound = true;
                 }
                 else
                 {

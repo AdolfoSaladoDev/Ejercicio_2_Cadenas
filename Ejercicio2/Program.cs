@@ -322,7 +322,7 @@
                 userString = Console.ReadLine();
 
 
-                if (userString.Length >= 40 && !string.IsNullOrEmpty(userString))
+                if (userString.Length >= 40)
                 {
                     Console.WriteLine("Cadena válida.");
 
